@@ -1,4 +1,4 @@
-# 👾Youtube_Ads_Skip👾
+# 👾Youtube API And Ads Skip👾
 嗨 你好  
 這是chrome插件跟api介紹  
 這是一個跟以往跳過ads不同的跳過youtube ads :>  
