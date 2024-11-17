@@ -1,0 +1,15 @@
+ {
+  "manifest_version": 3,
+  "name": "Youtube Premium Launcher",
+  "version": "1.0",
+  "description": "Youtube Premium 破解",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "world": "MAIN",
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
