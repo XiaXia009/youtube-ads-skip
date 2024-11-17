@@ -77,6 +77,7 @@ player.以下方法();
 `getAdState`：檢查廣告的當前狀態  
 `onAdUxClicked`：暫不確定功能  
 `logApiCall`: 暫不確定功能  
+`cancelPlayback`: 取消播放當前的影片
   
 1. 用戶互動  
 `addEventListener` / `removeEventListener`：暫不確定功能  
