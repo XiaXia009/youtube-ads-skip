@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    width: 360px;
+    height: auto;
+    background: #2a2a2a;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    padding: 24px;
+    position: relative;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #404040;
+}
+
+.header-icon {
+    color: #ff6b35;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff6b35;
+}
+
+/* Section Styles */
+.section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Stats Card */
+.stats-card {
+    background: #3a3a3a;
+    border-radius: 16px;
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 140px;
+}
+
+.stats-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ads-count {
+    font-size: 64px;
+    font-weight: 700;
+    color: #ff6b35;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+}
+
+.ads-label {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 500;
+}
+
+/* Mascot Styles */
+.mascot-container {
+    position: relative;
+}
+
+.mascot {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascot-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(255, 107, 53, 0.75));
+    margin-right: 30px;
+}
+
+.mascot-image:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 16px rgba(255, 107, 53, 0.75));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.action-btn:hover::before {
+    left: 100%;
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+    font-size: 18px;
+    padding: 18px 24px;
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+}
+
+.action-btn.secondary {
+    background: #4a4a4a;
+    color: #ccc;
+    border: 1px solid #555;
+}
+
+.action-btn.secondary:hover {
+    background: #555;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid #404040;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #666;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-indicator.active {
+    background: #4ade80;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+    body {
+        width: 320px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .ads-count {
+        font-size: 52px;
+    }
+    
+    .mascot {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .mascot-body {
+        width: 50px;
+        height: 40px;
+    }
+}
